@@ -1,0 +1,9 @@
+{
+  "question": false,
+  "max-temp": 99,
+  "send-email": "default@gmail.com",
+  "reciever-email": "default@gmail.com",
+  "smtp-port": 465,
+  "smtp-server": "smtp.default.com",
+  "email-password": "default password"
+}
