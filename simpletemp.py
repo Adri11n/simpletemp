@@ -8,14 +8,6 @@ import ssl
 from datetime import date
 from datetime import datetime
 
-display = """
-simpletemp  Copyright (C) 2021  Adriaan van Vliet
-This program comes with ABSOLUTELY NO WARRANTY; for details go to `https://www.gnu.org/licenses/gpl-3.0.txt.
-This is free software, and you are welcome to redistribute it
-under certain conditions; go to `https://www.gnu.org/licenses/gpl-3.0.txt for details.
-"""
-print(display)
-time.sleep(3)
 with open('config.json') as config_file:
     data = json.load(config_file)
 question = data['question']
@@ -25,14 +17,24 @@ reciever_email = data['reciever-email']
 password = data['email-password']
 smtp_server = data['smtp-server']
 smtp_port = data['smtp-port']
+howoften = data['time']
+display = """
+simpletemp  Copyright (C) 2021  Adriaan van Vliet
+This program comes with ABSOLUTELY NO WARRANTY; for details go to `https://www.gnu.org/licenses/gpl-3.0.txt.
+This is free software, and you are welcome to redistribute it
+under certain conditions; go to `https://www.gnu.org/licenses/gpl-3.0.txt for details.
+"""
 cmdwin = "wmic /namespace:\\\\root\\wmi PATH MSAcpi_ThermalZoneTemperature GET CurrentTemperature | findstr /v \"C\""
 cmd = "temp=$(cat /sys/class/thermal/thermal_zone*/temp) && echo $temp"
+a = " °C"
 amount = 0
 lol = platform.system()
 if lol == "Windows":
     os.system("cls")
 else:
     os.system("clear")
+print(display)
+time.sleep(3)
 print("Temp  | Time")
 while True:
     while True:
@@ -41,15 +43,20 @@ while True:
             temp = temp[0:2]
         else:
             temp = os.popen(cmd).read()
-            temp = temp[12:14]
-        a = " °C"
+            number = len(temp)
+            if number == 6:
+                temp = temp[0:2]
+            elif number == 18:
+                temp = temp[12:14]
+            else:
+                print("Error")
         today = date.today()
         today = today.strftime("%d/%m/%Y")
         today = " " + today
         now = datetime.now()
         current_time = now.strftime("%H:%M:%S")
         current_time = " | " + current_time
-        time.sleep(1)
+        time.sleep(howoften)
         print(temp + a + current_time + today)
         if not question :
             continue
