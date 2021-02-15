@@ -25,6 +25,8 @@ reciever_email = data['reciever-email']
 password = data['email-password']
 smtp_server = data['smtp-server']
 smtp_port = data['smtp-port']
+cmdwin = "wmic /namespace:\\\\root\\wmi PATH MSAcpi_ThermalZoneTemperature GET CurrentTemperature | findstr /v \"C\""
+cmd = "temp=$(cat /sys/class/thermal/thermal_zone*/temp) && echo $temp"
 amount = 0
 lol = platform.system()
 if lol == "Windows":
@@ -32,8 +34,6 @@ if lol == "Windows":
 else:
     os.system("clear")
 print("Temp  | Time")
-cmdwin = "wmic /namespace:\\\\root\\wmi PATH MSAcpi_ThermalZoneTemperature GET CurrentTemperature | findstr /v \"C\""
-cmd = "temp=$(cat /sys/class/thermal/thermal_zone*/temp) && echo $temp"
 while True:
     while True:
         if lol == "Windows":
