@@ -59,6 +59,7 @@ chmod +x simpletemp.py
 With this tool you will get your CPU temperature on Windows and Linux, with time and date.
 
 ![](https://raw.githubusercontent.com/Adri11n/simpletemp/main/Screenshot%20(31).png?token=ASI3SC3MJBQR7M7QJNY6QZTAGWGQU)
+
 You could also enable email notification when your CPU is getting to hot.
 
 Also the python and the linux .zip file contains a bash script that acts like an daemon, so in case you want to run this software in the background.
