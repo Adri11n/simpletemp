@@ -113,3 +113,6 @@ and paste follwing line in it (note replace the path to your simpletempd.sh)
 ```
 
 now your ready.
+
+# Knowen Bugs
+1 the email feature doesnt work on windows
