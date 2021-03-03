@@ -68,5 +68,5 @@ def checkasw():
         checkasw()
 
 
-makeconfi
+makeconfi()
 checkasw()
