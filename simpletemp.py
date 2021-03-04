@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 import json
 import os
-from clear import clear
 import time
 import smtplib
 import ssl
 import platform
+from clear import clear
 from datetime import date
 from datetime import datetime
 
