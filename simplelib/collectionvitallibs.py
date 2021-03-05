@@ -1,5 +1,4 @@
-import os
-import platform
+import os, platform
 
 def clear():
     if platform.system() == "Windows":

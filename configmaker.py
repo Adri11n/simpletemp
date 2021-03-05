@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-import json
-import time
-import getpass
+import json, time, getpass
 import simplelib.collectionvitallibs as extrafunc
 def makeconfig():
     extrafunc.banner()

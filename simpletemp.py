@@ -1,10 +1,5 @@
 #!/usr/bin/python3
-import json
-import os
-import time
-import smtplib
-import ssl
-import platform
+import json, os, time, smtplib, ssl,platform
 import simplelib.collectionvitallibs as extrafunc
 from datetime import date
 from datetime import datetime
