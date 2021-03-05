@@ -2,8 +2,10 @@
 import json
 import time
 import getpass
-from clear import clear
+import simplelib.collectionvitallibs as extrafunc
 def makeconfig():
+    extrafunc.banner()
+    print("\n\n")
     max_temp = int(input("max temperatur >"))
     send_email = input("sender email >")
     reciever_email = input("Recipient E-mail >")
@@ -41,7 +43,7 @@ def makeconfig():
 
 def checkasw():
     time.sleep(3)
-    clear()
+    extrafunc.clear()
     print("your entered values\n")
     print("max temperatur = " + str(confwrite["max-temp"]))
     print("sender email = " + str(confwrite["send-email"]))
@@ -59,7 +61,7 @@ def checkasw():
         time.sleep(2)
         exit()
     elif asw1 == "no":
-        clear()
+        extrafunc.clear()
         makeconfig()
         checkasw()
     else:
