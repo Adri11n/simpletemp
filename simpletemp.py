@@ -24,7 +24,9 @@ cmd = "cat /sys/class/thermal/thermal_zone0/temp"
 a = " °C"
 amount = 0
 lol = platform.system()
-clear()
+extrafunc.clear()
+extrafunc.banner()
+print("\n\n")
 print("""simpletemp  Copyright (C) 2021  Adriaan van Vliet
 This program comes with ABSOLUTELY NO WARRANTY; for details go to https://www.gnu.org/licenses/gpl-3.0.txt.
 This is free software, and you are welcome to redistribute it
