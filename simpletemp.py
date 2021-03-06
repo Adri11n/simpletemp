@@ -20,8 +20,14 @@ a = " °C"
 amount = 0
 lol = platform.system()
 extrafunc.clear()
-extrafunc.banner()
-print("\n\n")
+print("""
+       .__               .__          __                         
+  _____|__| _____ ______ |  |   _____/  |_  ____   _____ ______  
+ /  ___/  |/     \\____ \|  | _/ __ \   __\/ __ \ /     \\____ \ 
+ \___ \|  |  Y Y  \  |_> >  |_\  ___/|  | \  ___/|  Y Y  \  |_> >
+/____  >__|__|_|  /   __/|____/\___  >__|  \___  >__|_|  /   __/ 
+     \/         \/|__|             \/          \/      \/|__|    
+     """)
 print("""simpletemp  Copyright (C) 2021  Adriaan van Vliet
 This program comes with ABSOLUTELY NO WARRANTY; for details go to https://www.gnu.org/licenses/gpl-3.0.txt.
 This is free software, and you are welcome to redistribute it

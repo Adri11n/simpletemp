@@ -2,8 +2,14 @@
 import json, time, getpass
 import simplelib.collectionvitallibs as extrafunc
 def makeconfig():
-    extrafunc.banner()
-    print("\n\n")
+    print("""\n
+       .__               .__          __                         
+  _____|__| _____ ______ |  |   _____/  |_  ____   _____ ______  
+ /  ___/  |/     \\____ \|  | _/ __ \   __\/ __ \ /     \\____ \ 
+ \___ \|  |  Y Y  \  |_> >  |_\  ___/|  | \  ___/|  Y Y  \  |_> >
+/____  >__|__|_|  /   __/|____/\___  >__|  \___  >__|_|  /   __/ 
+     \/         \/|__|             \/          \/      \/|__|    
+    \n""")
     max_temp = int(input("max temperatur >"))
     send_email = input("sender email >")
     reciever_email = input("Recipient E-mail >")
