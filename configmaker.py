@@ -2,7 +2,6 @@
 import json, time, getpass
 import simplelib.collectionvitallibs as extrafunc
 
-os.chdir(os.path.dirname(__file__))
 def makeconfig():
     print("""\n
        .__               .__          __                         
