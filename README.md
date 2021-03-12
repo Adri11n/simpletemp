@@ -43,7 +43,7 @@ simpletemp.windows.zip is for windows, and it contains the Windows EXE and the c
 
 You need admin rights to run it.
 
-You might get a security warning don't worry it's because I compiled the source code without and cert.
+You might get a security warning don't worry it's because I compiled the source code without any cert.
 
 Simpletemp.python.zip could be run everywhere where a python interpreter is running (only windows and Linux are supported) and it contains simpletemp.py, config.json, configmaker.py and simpletempd.sh.
 
