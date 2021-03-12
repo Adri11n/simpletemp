@@ -4,7 +4,6 @@ import simplelib.collectionvitallibs as extrafunc
 from datetime import date
 from datetime import datetime
 
-os.chdir(os.path.dirname(__file__))
 with open('config.json') as config_file:
     data = json.load(config_file)
 question = data['question']
